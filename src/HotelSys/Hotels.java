@@ -100,6 +100,8 @@ DriverManager.registerDriver(driver);
 
 
         System.out.println("____ first Table___");
+        System.out.println("Enter hotel id");
+        int id=sc.nextInt();
         System.out.println("Enter Hotel Name: ");
         String hotel_name = sc.next();
         System.out.println("Enter Hotel Location: ");
@@ -187,13 +189,29 @@ DriverManager.registerDriver(driver);
         
         
         
-       
+        String sql1 = "insert into Table_1 valuse ("+id+","+hotel_name+"',"+hotel_location+"',"+hotel_created_data+"',"
+        +hotel_updated_date+"',"+hotel_is_Active+"')";
+        
+        for  (int i=0; i<10001; i++) {
+        	System.out.println(hotel_name+i);
+        }
+ 
         
         
-        
-        
-         
-             
+        Integer m = st.executeUpdate(sql);
+        if (m >= 1) {
+System.out.println("inserted successfully : " + sql);
+} else {
+System.out.println("insertion failed");
+}
+        String sql2 = "Select * from Table_1";
+ResultSet resultSet = st.executeQuery(sql2);
+         while (resultSet.next()) {
+//System.out.println(resultSet.getString("name"));
+//System.out.println(resultSet.getString("roll"));
+//System.out.println(resultSet.getString("cls"));
+}
+      
         
         con.close();
 } catch (Exception ex) {
