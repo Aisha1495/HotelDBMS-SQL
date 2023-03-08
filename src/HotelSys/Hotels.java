@@ -122,7 +122,7 @@ DriverManager.registerDriver(driver);
         String created_data = sc.next();
         System.out.println("Enter update data: ");
         String updated_date = sc.next();
-        System.out.println("Enter room type is Active");
+        System.out.println("Enter room type is Active True\\False");
         boolean is_Active = sc.nextBoolean();
         
         System.out.println("___third Table___");
@@ -136,7 +136,7 @@ DriverManager.registerDriver(driver);
         String Room_created_date=sc.next();
         System.out.println("Enter room updated date ");
         String Room_updated_date=sc.next();
-        System.out.println("Enter room is Active");
+        System.out.println("Enter room is Active True\\False");
         boolean room_is_Active = sc.nextBoolean();
         
         System.out.println("___4th Table___");
@@ -154,7 +154,7 @@ DriverManager.registerDriver(driver);
         String guest_created_date=sc.next();
         System.out.println("Enter guest updated date");
         String guest_updated_date=sc.next();
-        System.out.println("Enter guest hotel is_Active");
+        System.out.println("Enter guest hotel is_Active True\\False");
         boolean guest_hotel_is_Active=sc.nextBoolean();
         
         System.out.println("___5th Table___");
@@ -166,7 +166,7 @@ DriverManager.registerDriver(driver);
         String empT_created_date=sc.next();
         System.out.println("Enter employee update date");
         String empT_updated_date=sc.next();
-        System.out.println("Enter employee is active");
+        System.out.println("Enter employee is active True\\False");
         boolean empT_is_Active=sc.nextBoolean();
         
         System.out.println("___6th Table___");
@@ -184,7 +184,7 @@ DriverManager.registerDriver(driver);
         String Employee_created_date=sc.next();
         System.out.println("Enter employee update date");
         String Employee_updated_date=sc.next();
-        System.out.println("Enter employee is active");
+        System.out.println("Enter employee is active True\\False");
         boolean Employee_is_Active=sc.nextBoolean();
         
         
@@ -194,8 +194,10 @@ DriverManager.registerDriver(driver);
         
         for  (int i=0; i<10001; i++) {
         	System.out.println(hotel_name+i);
-        }
- 
+        } 
+        
+        
+        
         
         
         Integer m = st.executeUpdate(sql);
